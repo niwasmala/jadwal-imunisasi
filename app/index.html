@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html id="ng-app" ng-app="Alt" xmlns:ng="http://angularjs.org">
+<head lang="en">
+    <meta charset="utf-8">
+    <title>Jadwal Imunisasi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' * data: gap: *; style-src 'self' * 'unsafe-inline'; media-src *;script-src 'self' * 'unsafe-eval' 'unsafe-inline';frame-src 'self' *">
+
+    <link type="text/css" rel="stylesheet" media="all" href="asset/css/opensans.css">
+    <link type="text/css" rel="stylesheet" media="all" href="asset/css/keyframes.css">
+    <link type="text/css" rel="stylesheet" media="all" href="asset/css/materialize.css">
+    <link type="text/css" rel="stylesheet" media="all" href="asset/css/ionicons.css">
+    <link type="text/css" rel="stylesheet" media="all" href="asset/css/style.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body>
+    <div class="m-scene" id="main">
+        <ul id="slide-out-left" class="side-nav collapsible">
+            <li>
+                <div class="sidenav-header accent-color">
+                    <div class="nav-avatar">
+                        <img class="circle avatar" src="asset/img/icon.png" alt="">
+                        <div class="avatar-body">
+                            <h3 data-ng-bind="alt.title"></h3>
+                            <p data-ng-bind="alt.description"></p>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a data-ng-href="{{ alt.baseUrl }}" class="no-child">
+                    <i class="ion-android-home"></i> Home
+                </a>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="ion-android-happy"></i> Imunisasi</span>
+                </div>
+                <div class="collapsible-body" style="">
+                    <ul class="collapsible">
+                        <li>
+                            <a data-ng-href="{{ alt.baseUrl }}"></a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <a data-ng-href="{{ alt.baseUrl }}" class="no-child">
+                    <i class="ion-android-home"></i> Berita
+                </a>
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="ion-lightbulb"></i> Tentang Kami</span>
+                </div>
+                <div class="collapsible-body" style="">
+                    <ul class="collapsible">
+                        <li>
+                            <a data-ng-href="{{ alt.baseUrl }}about/developer">Pengembang</a>
+                            <a data-ng-href="{{ alt.baseUrl }}about/office">Kantor</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        <ul id="slide-out" class="side-nav right-aligned">
+
+        </ul>
+        <div id="content">
+            <div data-ng-view></div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="asset/js/jquery.js"></script>
+    <script type="text/javascript" src="asset/js/materialize.js"></script>
+
+    <script type="text/javascript" src="asset/js/aes.js"></script>
+    <script type="text/javascript" src="asset/js/store2.js"></script>
+    <script type="text/javascript" src="asset/js/angular.js"></script>
+    <script type="text/javascript" src="asset/js/angular-route.js"></script>
+    <script type="text/javascript" src="asset/js/angular-jwt.js"></script>
+    <script type="text/javascript" src="asset/js/alt.js"></script>
+    <script type="text/javascript" src="config.js"></script>
+    <script type="text/javascript" src="asset/js/require.js"></script>
+</body>
+</html>
